@@ -18,10 +18,14 @@ const sendMail = async (req, res) => {
 
     let info = await transporter.sendMail({
         from: `${sendersname} <${emailadd}>`,
+        replyTo: `${sendersname} <${emailadd}>`,
         to: "singhyash3012@gmail.com",
         subject: `${subject}`,
         text: `${text}`,
-        html: `<b>${text}</b>`,
+        html: `<p>Name : ${sendersname}</p>
+        <p>Mail ID : ${emailadd}</p>
+        <p>Phone Number : ${phonenos}</p>
+        <b>${text}</b>`,
     });
 
     console.log("Message sent: %s", info.messageId);
