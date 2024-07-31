@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Endpoint to handle sending mail
-app.post('/sendMail', sendMail);
+app.get('/sendMail', sendMail);
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
