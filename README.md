@@ -1,2 +1,2 @@
-# SendMailsNodemailer
-to send mails on Gmail
+# emailsender
+Send email to Gmail
