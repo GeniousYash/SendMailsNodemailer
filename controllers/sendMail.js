@@ -28,6 +28,7 @@ const sendMail = async (req, res) => {
         <b>${text}</b>`,
     });
 
+    console.log("Working");
     console.log("Message sent: %s", info.messageId);
     res.json(info);
 };
